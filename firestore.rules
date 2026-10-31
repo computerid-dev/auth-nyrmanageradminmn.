@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner() {
+      return request.auth != null
+        && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'owner';
+    }
+
+    match /admins/{uid} {
+      allow read: if request.auth != null && (request.auth.uid == uid || isOwner());
+      allow create, update, delete: if isOwner();
+    }
+  }
+}
