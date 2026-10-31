@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>MUCHINEKO Auth Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <h1 class="brand">MUCHINEKO <small>Auth Manager</small></h1>
+    <button id="logoutBtn" class="btn btn--light" type="button" hidden>Keluar</button>
+  </div>
+</header>
+
+<main class="container">
+  <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+  <section id="loginView" class="card" hidden>
+    <h2>Masuk sebagai owner</h2>
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn--block" type="submit">Masuk</button>
+    </form>
+  </section>
+
+  <div id="panelView" class="stack" hidden>
+    <section class="card">
+      <h2>Daftarkan admin baru</h2>
+      <form id="addForm" novalidate>
+        <div class="field">
+          <label for="addEmail">Email admin</label>
+          <input id="addEmail" name="email" type="email" autocomplete="off" required>
+        </div>
+        <div class="field">
+          <label for="addPassword">Password (minimal 8 karakter)</label>
+          <input id="addPassword" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        </div>
+        <button class="btn btn--block" type="submit">Daftarkan admin</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Daftar admin</h2>
+      <ul id="adminList" class="admin-list"></ul>
+    </section>
+  </div>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
