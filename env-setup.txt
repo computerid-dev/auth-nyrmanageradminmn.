@@ -1,0 +1,24 @@
+SETUP ENVIRONMENT VARIABLE (project Firebase: muchineko-admin-auth)
+Isi tiap pasangan Key dan Value ke form environment variable di Vercel.
+File ini hanya untuk setup. Jangan diunggah ke tempat publik.
+
+Key: FIREBASE_API_KEY
+Value: AIzaSyBkDd0_dSO4Fzqp1uYGpCnKJIi7UNlI0JM
+
+Key: FIREBASE_AUTH_DOMAIN
+Value: muchineko-admin-auth.firebaseapp.com
+
+Key: FIREBASE_PROJECT_ID
+Value: muchineko-admin-auth
+
+Key: FIREBASE_STORAGE_BUCKET
+Value: muchineko-admin-auth.firebasestorage.app
+
+Key: FIREBASE_MESSAGING_SENDER_ID
+Value: 101533213019
+
+Key: FIREBASE_APP_ID
+Value: 1:101533213019:web:096291a56182c1d9d47a7e
+
+Key: ALLOWED_HOSTS
+Value: auth-nyrmanageradminmn.vercel.app
